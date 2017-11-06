@@ -1,0 +1,43 @@
+<div class="jumbotron text-center">
+        <h1>Todos os Produtos</h1>
+        <a href="/" class="btn btn-lg btn-warning">Início</a>
+        <a href="/produtos/criar" class="btn btn-lg btn-success">Criar produto</a>
+        <a href="https://procatinator.com/" target="_blank" class="btn btn-lg btn-info">Cupom de desconto</a>
+    </div>
+    
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Categoria</th>
+                <th>Funções</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <% for (var produto of produtos) { %>
+                <tr>
+                    <td>
+                        <%= produto.name %>
+                    </td>
+                    <td>
+                        <%= produto.description %>
+                    </td>
+                    <td>
+                        R$ <%= produto.price %>
+                    </td>
+                    <td>
+                        <%= produto.category %>
+                    </td>
+                    <td>
+                        <a href="/produtos/<%= produto.slug %>" class="btn btn-sm btn-primary">Ver</a>
+                        <a href="/produtos/<%= produto.slug %>/editar" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="/produtos/<%= produto.slug %>/deletar" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+                <% } %>
+    
+        </tbody>
+    </table>

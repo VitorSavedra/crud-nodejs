@@ -1,0 +1,42 @@
+<div class="jumbotron text-center">
+    <h1>Todos os Usuários</h1>
+    <a href="/" class="btn btn-lg btn-warning">Início</a>
+    <a href="/cadastros/criar" class="btn btn-lg btn-success">Criar</a>
+    <a href="https://procatinator.com/" target="_blank" class="btn btn-lg btn-info">Acesso restrito</a>
+</div>
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Usuário</th>
+            <th>E-mail</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <% for (var cadastro of cadastros) { %>
+            <tr>
+                <td>
+                    <%= cadastro.firstname %>
+                </td>
+                <td>
+                    <%= cadastro.lastname %>
+                </td>
+                <td>
+                    <%= cadastro.user %>
+                </td>
+                <td>
+                    <%= cadastro.email %>
+                </td>
+                <td>
+                    <a href="/cadastros/<%= cadastro.user %>" class="btn btn-sm btn-primary">Ver</a>
+                    <a href="/cadastros/<%= cadastro.user %>/editar" class="btn btn-sm btn-primary">Editar</a>
+                    <a href="/cadastros/<%= cadastro.user %>/deletar" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+            <% } %>
+
+    </tbody>
+</table>

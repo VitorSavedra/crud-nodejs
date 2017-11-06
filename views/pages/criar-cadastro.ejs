@@ -1,0 +1,42 @@
+<div class="jumbotron text-center">
+    <h1>Criar cadastro</h1>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 col-sm-offset-3">
+
+        <form action="/cadastros/criar" method="POST">
+
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" name="firstname" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Sobrenome</label>
+                <input type="text" name="lastname" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Usuário</label>
+                <input type="text" name="user" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-lg">Criar</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>

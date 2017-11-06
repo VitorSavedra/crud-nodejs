@@ -1,0 +1,19 @@
+<div class="jumbotron text-center">
+    <h1>
+        <%= produto.name %>
+    </h1>
+    <p>
+        <h2>
+            <%= produto.description %>
+        </h2>
+    </p>
+    <p>
+        <h4>
+            R$ <%= produto.price %> - Categoria: <%= produto.category %>
+        </h4>
+    </p>
+    <p>
+        <a href="/" class="btn btn-lg btn-warning">Início</a>
+        <a href="/produtos/criar" class="btn btn-lg btn-success">Criar produto</a>
+    </p>
+</div>
